@@ -17,11 +17,14 @@ public class SimpleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	@Override
+	protected void doGet(final HttpServletRequest request, final HttpServletResponse response)
+			throws ServletException, IOException {
 		System.out.println("Hello from GET method.");
-		PrintWriter writer = response.getWriter();
+		final PrintWriter writer = response.getWriter();
 		writer.println("<h3>Hello in html</h2>");
 	}
 
